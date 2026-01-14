@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import About from "@/components/About";
 import { 
@@ -17,11 +18,23 @@ import {
   MessageCircleMore,
   Wrench
 } from 'lucide-react';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import { ChevronLeft,ChevronDown, User } from "lucide-react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+
+import { testimonials } from "@/data/testimonals";
+import { faqs } from "@/data/faq";
 
 export default function Home() {
+
+  const [active, setActive] = useState(0);
+
   return (
     <main>
-    <section className="relative bg-gradient-to-br from-blue-50 to-white py-10 pb-10 overflow-hidden">
+    <section className="relative py-10 pb-10 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -115,21 +128,273 @@ export default function Home() {
       {/* --- WHY CHOOSE US (STATS) --- */}
       <About/>
 
-      {/* --- CTA SECTION --- */}
-      <section className="py-24 bg-orange-500">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-4xl font-extrabold mb-6">Repair is just a click away.</h2>
-          <p className="text-xl mb-10 opacity-90">No hidden fees. You'll never be charged until you approve the cost.</p>
-          <div className="flex flex-col md:flex-row justify-center gap-4">
-            <button className="bg-white text-orange-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-gray-100 transition-colors">
-              Start Chat Support
-            </button>
-            <button className="bg-blue-900 text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-blue-950 transition-colors">
-              Call (800) GEEK-HELP
-            </button>
-          </div>
-        </div>
+      <section className="py-10 px-25 mb-10">
+        <h1 className="text-4xl">Dedicated to Every Customer, Every Time</h1>
+        <p className="text-base text-gray-600 py-1">Every time you reach out, you get our full attention. We listen, understand, and get things done quickly — 9 out of 10 issues resolved in just 45 minutes.</p>
       </section>
+
+
+
+      <section className="relative w-full min-h-screen overflow-hidden">
+      {/* Background Image */}
+      <Image
+        src="/bg2.jpg"
+        alt="Support agent"
+        fill
+        priority
+        className="object-cover object-right"
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white/10" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-20 grid lg:grid-cols-2 gap-14">
+        
+        {/* LEFT CONTENT */}
+        <div className="space-y-6">
+          <h1 className="text-4xl font-bold leading-tight">
+            Relax,{" "}
+            <span className="text-blue-600">
+              Connect & Let Us Handle the Rest
+            </span>
+          </h1>
+
+          <p className="text-gray-600 leading-relaxed max-w-xl">
+            At Geek Care, tech support has never been this easy. Sit back,
+            relax, and chat with our Support Squad from the comfort of your
+            home. No waiting lines. No hidden fees. Just real solutions from
+            real experts.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed max-w-xl">
+            Here’s the best part: you’ll never be charged until you approve
+            the cost of repair. That’s our commitment to trust, transparency,
+            and total peace of mind.
+          </p>
+
+          <h3 className="text-lg font-semibold">
+            Repair is just a click away.
+          </h3>
+        </div>
+
+        {/* RIGHT CARDS */}
+        <div className="grid sm:grid-cols-2 gap-6">
+          
+          {/* CARD 1 */}
+          <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
+            <h4 className="font-semibold text-lg">
+              Virus and Spyware Removal
+            </h4>
+            <p className="text-sm text-gray-600">
+              ✔ Comprehensive cleanup to restore speed, security, and performance.
+            </p>
+            <p className="text-xl font-bold">$139.99 <span className="text-sm font-normal">each</span></p>
+          </div>
+
+          {/* CARD 2 */}
+          <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
+            <h4 className="font-semibold text-lg">
+              Smooth Tech. Stress-Free Life.
+            </h4>
+            <p className="text-sm text-gray-600">
+              ✔ On-Demand Computer Tune-ups
+            </p>
+            <p className="text-xl font-bold">$29.99 <span className="text-sm font-normal">each</span></p>
+          </div>
+
+          {/* CARD 3 */}
+          <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
+            <h4 className="font-semibold text-lg">
+              Troubleshooting Made Simple — Leave it to Us
+            </h4>
+            <ul className="text-sm text-gray-600 space-y-1">
+              <li>✔ Computer</li>
+              <li>✔ Connected Home</li>
+              <li>✔ Home Theater</li>
+              <li>✔ Printer</li>
+              <li>✔ Network</li>
+              <li>✔ Appliance</li>
+            </ul>
+            <p className="text-xl font-bold">$29.99 <span className="text-sm font-normal">each</span></p>
+          </div>
+
+          {/* CARD 4 */}
+          <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
+            <h4 className="font-semibold text-lg">
+              Beyond Repairs — Full Online Support
+            </h4>
+            <ul className="text-sm text-gray-600 space-y-1">
+              <li>✔ Secure Data Backup & Transfer</li>
+              <li>✔ New Computer Setup</li>
+              <li>✔ Software Installation Made Easy</li>
+              <li>✔ Printer Installation & Configuration</li>
+              <li>✔ Quick Password Resets</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <div className="p-20">
+      <div className='flex w-full gap-8'>
+        <div className='w-1/2'>
+          <img src="/blog-img4.jpg" 
+          className="object-cover rounded-lg" alt="support-team" />
+        </div>
+        <div className='w-1/2 text-gray-600'>
+          <h1 className='text-4xl font-semibold mb-5 text-black'>Simple Steps to Book Your Appointment</h1>
+          <p className='text-base py-2'>Setting up your appointment with Geek Care is fast, simple, and designed around your convenience. We know how important your devices and appliances are, which is why we’ve made our process hassle-free and transparent.</p>
+          <ul className="list-disc">
+            <li><span className="font-bold text-black">Step 1 – Choose Your Service</span>
+              <p className="p-2">Select the type of support you need—whether it’s computers & tablets repair, fixing a printer offline issue, securing your system with PC virus protection, or setting up a WiFi & network connection. We also cover reliable installation and repair for major appliances.</p>
+            </li>
+            <li><span className="font-bold text-black">Step 2 – Book Your Geek Appointment</span>
+              <p className="p-2">Use our easy online system to schedule your preferred date and time. Whether you need immediate Geek Help or would like to plan ahead, our scheduling process is flexible to suit your needs.</p>
+            </li>
+            <li><span className="font-bold text-black">Step 3 – Get Expert Geek Support</span>
+              <p className="p-2">Once your geek appointment is confirmed, our certified experts will either connect remotely or arrive on-site to resolve your issue quickly and professionally. With Geek Care, you can always count on dependable Geek Support that puts your satisfaction first.</p>
+            </li>
+          </ul>
+          <p className='text-base py-2'>Booking with us means more than solving problems—it’s about gaining peace of mind, knowing your tech and home are in the best hands.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <section className="bg-[#F6F6F6] py-10 px-25 mb-10 flex flex-col items-center">
+      <h1 className="text-4xl">Ready to Book Your Geek Appointment?</h1>
+      <p className="text-base text-gray-600 py-3 text-center">Don’t wait for problems to slow you down. Whether it’s a printer offline issue, WiFi connection problem, PC virus protection, computer setup, or major appliance service, Geek Care has you covered.</p>
+      <button className="bg-[#086BAF] text-white px-8 py-4 font-bold flex items-center gap-2 shadow-lg shadow-blue-200 hover:scale-102 transition-transform hover:bg-blue-700">
+        Book your Geek Appointment today and let our expert sqaud deliver the reliable support you deserve.
+      </button>
+    </section>
+
+
+
+    <section className="py-20">
+      <h2 className="text-center text-3xl font-semibold mb-14">
+        Testimonials
+      </h2>
+
+      <div className="relative max-w-4xl mx-auto">
+        <Swiper
+          modules={[Navigation, Autoplay]}
+  slidesPerView={1}
+  loop={true}
+  autoplay={{
+    delay: 3000,               // 4 seconds like most testimonial sliders
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,   // stops on hover
+  }}
+  navigation={{
+    prevEl: ".prev-btn",
+    nextEl: ".next-btn",
+  }}
+        >
+          {testimonials.map((item, i) => (
+            <SwiperSlide key={i}>
+              <div className="flex border rounded-xl overflow-hidden bg-white">
+                
+                {/* Left vertical name */}
+                <div className="w-14 bg-gray-50 flex items-center justify-center">
+                  <span className="-rotate-90 text-sm font-semibold text-[#086BAF]">
+                    — {item.name}
+                  </span>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 px-10 py-8 text-center">
+                  {/* Avatar */}
+                  <div className="mx-auto mb-6 h-16 w-16 rounded-full bg-[#086BAF] flex items-center justify-center">
+                    <User className="text-white" size={32} />
+                  </div>
+
+                  {/* Text */}
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    “{item.text}”
+                  </p>
+
+                  {/* Stars */}
+                  <div className="flex justify-center gap-1">
+                    {Array.from({ length: item.rating }).map((_, idx) => (
+                      <Star
+                        key={idx}
+                        size={18}
+                        className="fill-[#086BAF] text-[#086BAF]"
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Navigation buttons */}
+        <div className="flex justify-center gap-6 mt-10">
+          <button className="prev-btn h-12 w-12 rounded-lg border flex items-center justify-center hover:bg-gray-50">
+            <ChevronLeft />
+          </button>
+          <button className="next-btn h-12 w-12 rounded-lg border flex items-center justify-center hover:bg-gray-50">
+            <ChevronRight />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section className="py-20">
+      <h2 className="text-center text-3xl font-semibold mb-10">
+        Frequently Asked Questions
+      </h2>
+
+      <div className="max-w-5xl mx-auto border rounded-xl overflow-hidden">
+        {faqs.map((item, i) => {
+          const isOpen = active === i;
+
+          return (
+            <div
+              key={i}
+              className={`border-b last:border-b-0 transition ${
+                isOpen ? "border-purple-400" : "border-gray-200"
+              }`}
+            >
+              {/* Question */}
+              <button
+                onClick={() => setActive(isOpen ? null : i)}
+                className={`w-full flex items-center justify-between px-6 py-5 text-left font-medium ${
+                  isOpen ? "border border-purple-400 rounded-md m-1" : ""
+                }`}
+              >
+                <span>
+                  Q{i + 1}. {item.q}
+                </span>
+
+                <ChevronDown
+                  className={`transition-transform duration-300 ${
+                    isOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {/* Answer */}
+              <div
+                className={`grid transition-all duration-300 ease-in-out ${
+                  isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                }`}
+              >
+                <div className="overflow-hidden px-6 text-gray-600">
+                  {item.a}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
     </main>
   );
 }
