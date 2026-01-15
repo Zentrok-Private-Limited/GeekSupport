@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 function Header() {
   return (
@@ -9,7 +10,9 @@ function Header() {
         <div>
             <ul className='text-base flex gap-6 font-medium'>
                 <li>Home</li>
-                <li>About Us</li>
+                <li className="hover:text-gray-300 cursor-pointer">
+                    <Link href="/about">About Us</Link>
+                </li>
                 <li>Services</li>
                 <li>Book Appointment</li>
                 <li>Contact Us</li>
