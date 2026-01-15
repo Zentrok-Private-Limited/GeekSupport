@@ -41,9 +41,6 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             className="space-y-6"
           >
-            <span className="bg-blue-100 text-[#086BAF] px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">
-              Expert Tech Support
-            </span>
             <h1 className="text-5xl md:text-4xl font-bold text-blue-950 leading-tight mt-5">
               Geek Support : <span className="text-[#086BAF]">Computer Repair, Printer Help & Wi-Fi Setup Services</span>
             </h1>
@@ -103,12 +100,11 @@ export default function Home() {
           
         </div>
         
-        <div className="grid grid-cols-2  md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:mx-8">
           {[
             { icon: <Monitor />, label: "Computer & Tablets", color: "bg-blue-50" },
             { icon: <Wifi />, label: "WiFi & Network", color: "bg-green-50" },
             { icon: <Printer />, label: "Printer Offline", color: "bg-purple-50" },
-            { icon: <ShieldCheck />, label: "Virus Protection", color: "bg-red-50" },
             { icon: <Settings />, label: "Major Appliance", color: "bg-orange-50" },
           ].map((item, i) => (
             <motion.div 
@@ -125,7 +121,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- WHY CHOOSE US (STATS) --- */}
       <About/>
 
       <section className="py-10 px-25 mb-10">
@@ -182,7 +177,7 @@ export default function Home() {
         <div className="grid sm:grid-cols-2 gap-6">
           
           {/* CARD 1 */}
-          <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
+          {/* <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
             <h4 className="font-semibold text-lg">
               Virus and Spyware Removal
             </h4>
@@ -190,7 +185,7 @@ export default function Home() {
               ✔ Comprehensive cleanup to restore speed, security, and performance.
             </p>
             <p className="text-xl font-bold">$139.99 <span className="text-sm font-normal">each</span></p>
-          </div>
+          </div> */}
 
           {/* CARD 2 */}
           <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
@@ -267,7 +262,7 @@ export default function Home() {
 
     <section className="bg-[#F6F6F6] py-10 px-25 mb-10 flex flex-col items-center">
       <h1 className="text-4xl">Ready to Book Your Geek Appointment?</h1>
-      <p className="text-base text-gray-600 py-3 text-center">Don’t wait for problems to slow you down. Whether it’s a printer offline issue, WiFi connection problem, PC virus protection, computer setup, or major appliance service, Geek Care has you covered.</p>
+      <p className="text-base text-gray-600 py-3 text-center">Don’t wait for problems to slow you down. Whether it’s a printer offline issue, WiFi connection problem, computer setup, or major appliance service, Geek Care has you covered.</p>
       <button className="bg-[#086BAF] text-white px-8 py-4 font-bold flex items-center gap-2 shadow-lg shadow-blue-200 hover:scale-102 transition-transform hover:bg-blue-700">
         Book your Geek Appointment today and let our expert sqaud deliver the reliable support you deserve.
       </button>
@@ -358,9 +353,6 @@ export default function Home() {
           return (
             <div
               key={i}
-              className={`border-b last:border-b-0 transition ${
-                isOpen ? "border-purple-400" : "border-gray-200"
-              }`}
             >
               {/* Question */}
               <button
@@ -386,7 +378,7 @@ export default function Home() {
                   isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                 }`}
               >
-                <div className="overflow-hidden px-6 text-gray-600">
+                <div className="overflow-hidden px-6 py-1 text-gray-600">
                   {item.a}
                 </div>
               </div>
