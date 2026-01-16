@@ -9,7 +9,10 @@ import {
   Monitor, 
   Wifi, 
   Printer, 
-  ShieldCheck, 
+  ShieldCheck,
+  LaptopMinimalCheck,
+  MonitorSmartphone,
+  Power, 
   Settings, 
   ChevronRight, 
   Star,
@@ -42,14 +45,15 @@ export default function Home() {
             className="space-y-6"
           >
             <h1 className="text-5xl md:text-4xl font-bold text-blue-950 leading-tight mt-5">
-              Geek Support : <span className="text-[#086BAF]">Computer Repair, Printer Help & Wi-Fi Setup Services</span>
+              GeekSupportPro : <span className="text-[#086BAF]"> Computer Repair & IT Services</span>
             </h1>
+            <h4 className="text-2xl font-semibold">Fast, Reliable Help for Computer & Device Issues</h4>
             <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-              Experience fast, reliable support for computers, printers, Wi-Fi, and home devices by expert technicians. Our geek's squad handles repair, installation, and troubleshooting with precision and care. Help is always just a click away. Book your geek appointment now!
+              Work with certified technicians today. GeekSupportPro provides professional computer repair,troubleshooting, and IT services for home users and small businesses across the United States.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="bg-[#086BAF] text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 shadow-lg shadow-blue-200 hover:scale-105 transition-transform">
-                Book Appointment Now <ChevronRight size={20} />
+                <Phone size={20} /> Call now to get immediate assistance
               </button>
               
             </div>
@@ -79,7 +83,7 @@ export default function Home() {
           </motion.div>
           
         </div>
-        <div className="flex gap-5 justify-center pt-5">
+        {/* <div className="flex gap-5 justify-center pt-5">
           <button className="px-6 py-3 rounded-full font-medium text-sm flex items-center gap-2 shadow-lg shadow-gray-300 hover:scale-105 transition-transform">
             <span className="text-[#086BAF] text-sm px-1"><PhoneCall/></span>Call an Expert Now <ChevronRight size={20} />
           </button>
@@ -89,7 +93,7 @@ export default function Home() {
           <button className="px-6 py-3 rounded-full font-medium text-sm flex items-center gap-2 shadow-lg shadow-gray-300 hover:scale-105 transition-transform">
             <span className="text-[#086BAF] text-sm px-1"><Wrench/></span>Effective Support Service <ChevronRight size={20} />
           </button>
-        </div>
+        </div> */}
       </section>
 
       {/* --- WHAT SERVICE DO YOU NEED? --- */}
@@ -100,12 +104,13 @@ export default function Home() {
           
         </div>
         
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:mx-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 lg:mx-8">
           {[
-            { icon: <Monitor />, label: "Computer & Tablets", color: "bg-blue-50" },
-            { icon: <Wifi />, label: "WiFi & Network", color: "bg-green-50" },
-            { icon: <Printer />, label: "Printer Offline", color: "bg-purple-50" },
-            { icon: <Settings />, label: "Major Appliance", color: "bg-orange-50" },
+            { icon: <Monitor />, label: "Computer & Laptop Repair", color: "bg-blue-50" },
+            { icon: <ShieldCheck />, label: "Virus & Malware Removal", color: "bg-pink-50" },
+            { icon: <Power />, label: "Troubleshooting & Optimization", color: "bg-green-50" },
+            { icon: <MonitorSmartphone />, label: "New Device Setup", color: "bg-purple-50" },
+            { icon: <LaptopMinimalCheck />, label: "Remote IT Services", color: "bg-orange-50" },
           ].map((item, i) => (
             <motion.div 
               whileHover={{ y: -5 }}
@@ -141,7 +146,7 @@ export default function Home() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white/10" />
+      <div className="absolute inset-0 bg-white/20" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-20 grid lg:grid-cols-2 gap-14">
@@ -149,13 +154,20 @@ export default function Home() {
         {/* LEFT CONTENT */}
         <div className="space-y-6">
           <h1 className="text-4xl font-bold leading-tight">
-            Relax,{" "}
+            Why Choose{" "}
             <span className="text-blue-600">
-              Connect & Let Us Handle the Rest
+              GeekSupportPro?
             </span>
           </h1>
 
-          <p className="text-gray-600 leading-relaxed max-w-xl">
+          <ul className="text-xl text-gray-800 space-y-4">
+              <li>✔ Certified and experienced technicians</li>
+              <li>✔ Fast response with same‑day service available</li>
+              <li>✔ Transparent pricing with no hidden charges</li>
+              <li>✔ Support for Windows, macOS, printers, and peripherals</li>
+              <li>✔ Clear explanations — no technical jargon</li>
+            </ul>
+          {/* <p className="text-gray-600 leading-relaxed max-w-xl">
             At Geek Care, tech support has never been this easy. Sit back,
             relax, and chat with our Support Squad from the comfort of your
             home. No waiting lines. No hidden fees. Just real solutions from
@@ -166,7 +178,7 @@ export default function Home() {
             Here’s the best part: you’ll never be charged until you approve
             the cost of repair. That’s our commitment to trust, transparency,
             and total peace of mind.
-          </p>
+          </p> */}
 
           <h3 className="text-lg font-semibold">
             Repair is just a click away.
@@ -188,7 +200,7 @@ export default function Home() {
           </div> */}
 
           {/* CARD 2 */}
-          <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
+          {/* <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
             <h4 className="font-semibold text-lg">
               Smooth Tech. Stress-Free Life.
             </h4>
@@ -196,10 +208,10 @@ export default function Home() {
               ✔ On-Demand Computer Tune-ups
             </p>
             <p className="text-xl font-bold">$29.99 <span className="text-sm font-normal">each</span></p>
-          </div>
+          </div> */}
 
           {/* CARD 3 */}
-          <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
+          {/* <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
             <h4 className="font-semibold text-lg">
               Troubleshooting Made Simple — Leave it to Us
             </h4>
@@ -212,10 +224,10 @@ export default function Home() {
               <li>✔ Appliance</li>
             </ul>
             <p className="text-xl font-bold">$29.99 <span className="text-sm font-normal">each</span></p>
-          </div>
+          </div> */}
 
           {/* CARD 4 */}
-          <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
+          {/* <div className="bg-white rounded-xl shadow-lg p-6 space-y-4">
             <h4 className="font-semibold text-lg">
               Beyond Repairs — Full Online Support
             </h4>
@@ -226,7 +238,7 @@ export default function Home() {
               <li>✔ Printer Installation & Configuration</li>
               <li>✔ Quick Password Resets</li>
             </ul>
-          </div>
+          </div> */}
 
         </div>
       </div>
@@ -240,20 +252,23 @@ export default function Home() {
           className="object-cover rounded-lg" alt="support-team" />
         </div>
         <div className='w-1/2 text-gray-600'>
-          <h1 className='text-4xl font-semibold mb-5 text-black'>Simple Steps to Book Your Appointment</h1>
-          <p className='text-base py-2'>Setting up your appointment with Geek Care is fast, simple, and designed around your convenience. We know how important your devices and appliances are, which is why we’ve made our process hassle-free and transparent.</p>
+          <h1 className='text-4xl font-semibold mb-5 text-black'>Simple Steps To Connect With Us</h1>
+          <p className='text-base py-2'>Contacting GeekSupportPro is fast, simple, and designed around your convenience. We know how important your devices and appliances are, which is why we’ve made our process hassle-free and transparent.</p>
           <ul className="list-disc">
-            <li><span className="font-bold text-black">Step 1 – Choose Your Service</span>
-              <p className="p-2">Select the type of support you need—whether it’s computers & tablets repair, fixing a printer offline issue, securing your system with PC virus protection, or setting up a WiFi & network connection. We also cover reliable installation and repair for major appliances.</p>
+            <li><span className="font-bold text-black">Step 1 – Contact Us</span>
+              <p className="p-2">Describe the issue you’re facing and our support team technicians will connect with you within 24 hours.</p>
             </li>
-            <li><span className="font-bold text-black">Step 2 – Book Your Geek Appointment</span>
-              <p className="p-2">Use our easy online system to schedule your preferred date and time. Whether you need immediate Geek Help or would like to plan ahead, our scheduling process is flexible to suit your needs.</p>
+            <li><span className="font-bold text-black">Step 2 – Connect with a technician</span>
+              <p className="p-2">Our certified technicians will arrive at your home or office and diagnose the issue.</p>
             </li>
-            <li><span className="font-bold text-black">Step 3 – Get Expert Geek Support</span>
-              <p className="p-2">Once your geek appointment is confirmed, our certified experts will either connect remotely or arrive on-site to resolve your issue quickly and professionally. With Geek Care, you can always count on dependable Geek Support that puts your satisfaction first.</p>
+            <li><span className="font-bold text-black">Step 3 –  Diagnosis and repair</span>
+              <p className="p-2">We’ll diagnose the issue and get your device or home back up and running in no time.</p>
+            </li>
+            <li><span className="font-bold text-black">Step 4 –  Your system restored and ready to use</span>
+              <p className="p-2"> Your device will be ready to use and fully dignosed.</p>
             </li>
           </ul>
-          <p className='text-base py-2'>Booking with us means more than solving problems—it’s about gaining peace of mind, knowing your tech and home are in the best hands.</p>
+          <p className='text-base py-2'>Consulting us means more than solving problems—it’s about gaining peace of mind, knowing your tech and home are in the best hands.</p>
         </div>
       </div>
     </div>
@@ -261,10 +276,10 @@ export default function Home() {
 
 
     <section className="bg-[#F6F6F6] py-10 px-25 mb-10 flex flex-col items-center">
-      <h1 className="text-4xl">Ready to Book Your Geek Appointment?</h1>
-      <p className="text-base text-gray-600 py-3 text-center">Don’t wait for problems to slow you down. Whether it’s a printer offline issue, WiFi connection problem, computer setup, or major appliance service, Geek Care has you covered.</p>
+      <h1 className="text-4xl">Need immediate help?</h1>
+      <p className="text-base text-gray-600 py-3 text-center">Don’t wait for problems to slow you down. Whether it’s a printer offline issue, WiFi connection problem, computer setup, or major appliance service, GeekSupportPro has you covered.</p>
       <button className="bg-[#086BAF] text-white px-8 py-4 font-bold flex items-center gap-2 shadow-lg shadow-blue-200 hover:scale-102 transition-transform hover:bg-blue-700">
-        Book your Geek Appointment today and let our expert sqaud deliver the reliable support you deserve.
+        <Phone size={20} /> Call now to get immediate assistance
       </button>
     </section>
 
@@ -281,9 +296,9 @@ export default function Home() {
   slidesPerView={1}
   loop={true}
   autoplay={{
-    delay: 3000,               // 4 seconds like most testimonial sliders
+    delay: 3000,               
     disableOnInteraction: false,
-    pauseOnMouseEnter: true,   // stops on hover
+    pauseOnMouseEnter: true,   
   }}
   navigation={{
     prevEl: ".prev-btn",
@@ -358,7 +373,7 @@ export default function Home() {
               <button
                 onClick={() => setActive(isOpen ? null : i)}
                 className={`w-full flex items-center justify-between px-6 py-5 text-left font-medium ${
-                  isOpen ? "border border-purple-400 rounded-md m-1" : ""
+                  isOpen ? "border-3 border-[#086BAF]/40 rounded-md" : ""
                 }`}
               >
                 <span>

@@ -6,11 +6,10 @@ function About () {
     <div className='pt-20 px-20'>
         <div className='flex w-full gap-8'>
             <div className='w-1/2'>
-                <h1 className='text-4xl font-semibold mb-5'>About Geek Support</h1>
-                <p className='text-base py-2'>At Geek Care, we are more than just a support service—we are your reliable partner for all things tech and home. From computers & tablets, and WiFi & network troubleshooting to fixing printer offline issues,and assisting with major appliance services, we deliver complete solutions that customers trust.</p>
-                <p className='text-base py-2'>Our mission is simple: to provide fast, professional, and dependable geek support that keeps your devices and appliances running smoothly. Whether you need urgent geek help for a technical issue or want to schedule a geek's squad appointment, our expert squad is ready to assist you anytime, anywhere.</p>
-                <p className='text-base py-2'>With Geek Care, you can easily book a geek appointment online and get connected to our trained specialists. We combine professionalism, accountability, and innovation to deliver results that matter. Every geek squad expert in our team is dedicated to solving problems efficiently and ensuring your satisfaction.</p>
-                <p className='text-base py-2'>Choosing Geek Care means choosing a partner committed to excellence, integrity, and reliable service. We don’t just fix issues—we provide peace of mind with every solution.</p>
+                <h1 className='text-4xl font-semibold mb-5'>About GeekSupportPro</h1>
+                <p className='text-base py-2'><span className='font-semibold'>GeekSupportPro is an independent computer repair and IT support service</span> dedicated to helping individuals and small businesses resolve everyday technology issues quickly and reliably. We specialize in diagnosing and fixing computer problems, optimizing system performance, setting up new devices, and providing ongoing technical assistance across a wide range of hardware and software platforms.</p>
+                <p className='text-base py-2'>Our services include general troubleshooting, operating system support, device setup, performance tuning, software installation, network assistance, and preventive maintenance to keep your systems running smoothly. We focus on clear communication, practical solutions, and customer-first support—without unnecessary upsells or technical jargon.</p>
+                <p className='text-base py-2'>GeekSupportPro operates as a completely independent service provider.<span className='font-semibold'> We are not affiliated with, endorsed by, or connected to Best Buy, Geek Squad, or any other consumer technology brand.</span> All trademarks and brand names referenced are the property of their respective owners and are used solely for identification purposes.</p>
             </div>
 
             <div className='w-1/2'>

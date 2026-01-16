@@ -1,7 +1,7 @@
 // data/faqs.js
 export const faqs = [
   {
-    q: "What types of tech support services does Geek offer?",
+    q: "What types of tech support services does GeekSupportPro offer?",
     a: "We provide complete support for computers, tablets, printers, WiFi networks, virus protection, and smart computer appliances. Whether you need setup, troubleshooting, or repair, our Geek Care team has you covered.",
   },
   {
@@ -29,7 +29,7 @@ export const faqs = [
     a: "Yes. We support Microsoft Outlook, OneDrive, email troubleshooting, and app integration for devices connected to your home or office network.",
   },
   {
-    q: "How do I book a service with Geek?",
-    a: "Simply call us, start a live chat, or book online. A Geek technician will walk you through the next steps and get your issue resolved quickly.",
+    q: "How do I consult a service with GeekSupportPro?",
+    a: "Simply call us. A Geek technician will walk you through the next steps and get your issue resolved quickly.",
   },
 ];

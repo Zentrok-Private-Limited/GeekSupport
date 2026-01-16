@@ -13,7 +13,9 @@ function Header() {
                 <li className="hover:text-gray-300 cursor-pointer">
                     <Link href="/about">About Us</Link>
                 </li>
-                <li>Services</li>
+                <li className="hover:text-gray-300 cursor-pointer">
+                    <Link href="/services">Services</Link>
+                </li>
                 <li>Book Appointment</li>
                 <li>Contact Us</li>
             </ul>

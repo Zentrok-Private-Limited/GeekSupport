@@ -15,7 +15,7 @@ function AboutUs() {
             Our Mission
           </h3>
           <p className="leading-relaxed">
-            At Geek Care, our mission is to simplify technology and appliance
+            At GeekSupportPro, our mission is to simplify technology and appliance
             care by delivering reliable, professional, and affordable support
             services. We aim to provide every customer with peace of mind,
             knowing that expert help is only a click away.
@@ -27,32 +27,21 @@ function AboutUs() {
           </h3>
           <p className="leading-relaxed">
             We envision a world where technology works seamlessly for everyone.
-            By combining innovation, accountability, and customer focus, Geek
-            Care strives to be the most trusted name in tech and appliance
+            By combining innovation, accountability, and customer focus, GeekSupportPro strives to be the most trusted name in tech and appliance
             support for households and businesses alike.
           </p>
         </div>
       </section>
 
-      <section className="bg-[#F6F6F6] pt-10 px-25 mb-10 flex flex-col">
-        <h1 className="text-4xl">Why Choose Us?</h1>
-        <ul className="list-disc pt-4">
-          <li className="flex gap-2 "><span className="text-base font-bold">24/7 Availability -</span>
-            <p className="text-base">Get expert support whenever you need it.</p>
-          </li>
-          <li className="flex gap-2 "><span className="text-base font-bold">Certified Experts -</span>
-            <p className="text-base">Skilled professionals for computers, WiFi, printers, and appliances.</p>
-          </li>
-          <li className="flex gap-2 "><span className="text-base font-bold">Same-Day Appointments -</span>
-            <p className="text-base">Book a Geek Appointment at your convenience.</p>
-          </li>
-          <li className="flex gap-2 "><span className="text-base font-bold">Remote & On-Site Help -</span>
-            <p className="text-base">Flexible solutions designed around your needs.</p>
-          </li>
-          <li className="flex gap-2 "><span className="text-base font-bold">Proven Trust -</span>
-            <p className="text-base">Hundreds of satisfied customers rely on Geek Help every day.</p>
-          </li>
-        </ul>
+      <section className="bg-[#F6F6F6] py-10 px-25 flex flex-col">
+        <h1 className="text-4xl mb-6">Why Choose Us?</h1>
+        <ul className="text-base text-gray-800 space-y-4">
+              <li>✔ Certified and experienced technicians</li>
+              <li>✔ Fast response with same‑day service available</li>
+              <li>✔ Transparent pricing with no hidden charges</li>
+              <li>✔ Support for Windows, macOS, printers, and peripherals</li>
+              <li>✔ Clear explanations — no technical jargon</li>
+            </ul>
       </section>
     </div>
   );
