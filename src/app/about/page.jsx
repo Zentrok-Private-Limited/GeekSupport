@@ -1,12 +1,18 @@
 import React from "react";
 import About from "@/components/About";
+import Link from "next/link";
 
 function AboutUs() {
   return (
     <div>
-      <div className=" py-14 bg-[#F6F6F6]">
-        <p className="text-center text-3xl font-bold text-black/80">About Us</p>
-      </div>
+      <section className="bg-gray-200 py-12 text-center">
+              <div className="container mx-auto px-4">
+                <h1 className="text-4xl font-bold mb-4">About Us</h1>
+                <nav className="text-sm text-[#086BAF]">
+                  <Link href="/" className="hover:text-black cursor-pointer">Home</Link> / <span>About Us</span>
+                </nav>
+              </div>
+      </section>
       <About />
 
       <section className="flex lg:p-20 gap-10">

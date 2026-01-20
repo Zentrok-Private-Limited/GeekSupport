@@ -5,21 +5,13 @@ import { motion } from "framer-motion";
 import About from "@/components/About";
 import { 
   Phone, 
-  MessageSquare, 
-  Monitor, 
-  Wifi, 
-  Printer, 
+  Monitor,
   ShieldCheck,
   LaptopMinimalCheck,
   MonitorSmartphone,
   Power, 
-  Settings, 
   ChevronRight, 
-  Star,
-  CheckCircle2,
-  PhoneCall,
-  MessageCircleMore,
-  Wrench
+  Star
 } from 'lucide-react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -128,7 +120,7 @@ export default function Home() {
 
       <About/>
 
-      <section className="py-10 px-25 mb-10">
+      <section className="py-10 px-10 lg:px-25 mb-10">
         <h1 className="text-4xl">Dedicated to Every Customer, Every Time</h1>
         <p className="text-base text-gray-600 py-1">Every time you reach out, you get our full attention. We listen, understand, and get things done quickly — 9 out of 10 issues resolved in just 45 minutes.</p>
       </section>
@@ -245,13 +237,13 @@ export default function Home() {
     </section>
 
 
-    <div className="p-20">
-      <div className='flex w-full gap-8'>
-        <div className='w-1/2'>
+    <div className="p-10 lg:p-20">
+      <div className='flex flex-col lg:flex-row w-full gap-8'>
+        <div className='lg:w-1/2'>
           <img src="/blog-img4.jpg" 
           className="object-cover rounded-lg" alt="support-team" />
         </div>
-        <div className='w-1/2 text-gray-600'>
+        <div className='lg:w-1/2 text-gray-600'>
           <h1 className='text-4xl font-semibold mb-5 text-black'>Simple Steps To Connect With Us</h1>
           <p className='text-base py-2'>Contacting GeekSupportPro is fast, simple, and designed around your convenience. We know how important your devices and appliances are, which is why we’ve made our process hassle-free and transparent.</p>
           <ul className="list-disc">
@@ -275,7 +267,7 @@ export default function Home() {
 
 
 
-    <section className="bg-[#F6F6F6] py-10 px-25 mb-10 flex flex-col items-center">
+    <section className="bg-[#F6F6F6] py-10 px-10 lg:px-25 mb-10 flex flex-col items-center">
       <h1 className="text-4xl">Need immediate help?</h1>
       <p className="text-base text-gray-600 py-3 text-center">Don’t wait for problems to slow you down. Whether it’s a printer offline issue, WiFi connection problem, computer setup, or major appliance service, GeekSupportPro has you covered.</p>
       <button className="bg-[#086BAF] text-white px-8 py-4 font-bold flex items-center gap-2 shadow-lg shadow-blue-200 hover:scale-102 transition-transform hover:bg-blue-700">

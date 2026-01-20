@@ -3,16 +3,16 @@ import {ShieldCheck, ThumbsUp,ClockCheck} from 'lucide-react'
 
 function About () {
   return (
-    <div className='pt-20 px-20'>
-        <div className='flex w-full gap-8'>
-            <div className='w-1/2'>
+    <div className='pt-20 px-10 lg:px-20'>
+        <div className='flex flex-col lg:flex-row w-full gap-8'>
+            <div className='lg:w-1/2'>
                 <h1 className='text-4xl font-semibold mb-5'>About GeekSupportPro</h1>
                 <p className='text-base py-2'><span className='font-semibold'>GeekSupportPro is an independent computer repair and IT support service</span> dedicated to helping individuals and small businesses resolve everyday technology issues quickly and reliably. We specialize in diagnosing and fixing computer problems, optimizing system performance, setting up new devices, and providing ongoing technical assistance across a wide range of hardware and software platforms.</p>
                 <p className='text-base py-2'>Our services include general troubleshooting, operating system support, device setup, performance tuning, software installation, network assistance, and preventive maintenance to keep your systems running smoothly. We focus on clear communication, practical solutions, and customer-first support—without unnecessary upsells or technical jargon.</p>
                 <p className='text-base py-2'>GeekSupportPro operates as a completely independent service provider.<span className='font-semibold'> We are not affiliated with, endorsed by, or connected to Best Buy, Geek Squad, or any other consumer technology brand.</span> All trademarks and brand names referenced are the property of their respective owners and are used solely for identification purposes.</p>
             </div>
 
-            <div className='w-1/2'>
+            <div className='lg:w-1/2'>
                 <img src="/about-img.jpg" 
                 className="object-cover rounded-lg" alt="support-team" />
             </div>

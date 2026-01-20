@@ -1,27 +1,66 @@
-import React from 'react'
-import Link from 'next/link'
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className='flex items-center justify-between px-5 h-16 bg-[#086BAF] text-white'>
-        <div>
-            <h2 className='text-3xl font-bold'>Geek Support</h2>
-        </div>
-        <div>
-            <ul className='text-base flex gap-6 font-medium'>
-                <li>Home</li>
-                <li className="hover:text-gray-300 cursor-pointer">
-                    <Link href="/about">About Us</Link>
-                </li>
-                <li className="hover:text-gray-300 cursor-pointer">
-                    <Link href="/services">Services</Link>
-                </li>
-                <li>Book Appointment</li>
-                <li>Contact Us</li>
-            </ul>
-        </div>
-    </div>
-  )
+    <header className="bg-[#086BAF] text-white">
+      <div className="flex items-center justify-between px-5 h-16">
+        {/* Logo */}
+        <h2 className="text-2xl md:text-3xl font-bold">
+          Geek Support Pro
+        </h2>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-6 font-medium">
+          {[
+            { name: "Home", href: "/" },
+            { name: "About Us", href: "/about" },
+            { name: "Services", href: "/services" },
+            { name: "Book Appointment", href: "/Appointment" },
+            { name: "Contact Us", href: "/contact" },
+          ].map((item) => (
+            <li key={item.name} className="hover:text-gray-300">
+              <Link href={item.href}>{item.name}</Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <ul className="md:hidden flex flex-col gap-4 px-5 pb-4 bg-[#086BAF] font-medium">
+          {[
+            { name: "Home", href: "/" },
+            { name: "About Us", href: "/about" },
+            { name: "Services", href: "/services" },
+            { name: "Book Appointment", href: "/Appointment" },
+            { name: "Contact Us", href: "/contact" },
+          ].map((item) => (
+            <li
+              key={item.name}
+              className="hover:text-gray-300"
+              onClick={() => setIsOpen(false)}
+            >
+              <Link href={item.href}>{item.name}</Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </header>
+  );
 }
 
-export default Header
+export default Header;
