@@ -48,13 +48,15 @@ export default function ServicesPage() {
     imagePlaceholder: "/pc_virus.png",
     description:
       "Protect your system from harmful viruses, malware, spyware, and ransomware. We perform deep security scans, remove malicious threats, and help secure your device to prevent future infections and data compromise.",
-    reverse: true
+    hyperlink:"/virus-removal",
+      reverse: true
   },
   {
     title: "Troubleshooting & Optimization",
     imagePlaceholder: "/troubleshoot.jpg",
     description:
       "Experiencing errors, freezes, or slow performance? We identify and resolve software conflicts, driver issues, and system misconfigurations while optimizing your device for faster speed, better stability, and improved performance.",
+    
     reverse: false
   },
   {
